@@ -1,0 +1,37 @@
+/*
+======
+Fonts
+======
+*/
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Fredericka+the+Great&display=swap');
+
+@import './variables.scss';
+@import './globals.scss';
+@import './header.scss';
+@import './hero.scss';
+@import './about.scss';
+@import './error.scss';
+@import './products.scss';
+@import './singleProduct.scss';
+@import './cart.scss';
+@import './login.scss';
+@import './alert.scss';
+@import './checkout.scss';
+@import './paginate.scss';
+@import './filters.scss';
+@import './featured.scss';
+@import './loading.scss';
+@import './footer.scss';
+
+.allProducts {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem 3rem 3rem;
+}
+
+@media screen and (min-width: 992px) {
+  .allProducts {
+    flex-direction: row;
+    padding-left: 3rem;
+  }
+}

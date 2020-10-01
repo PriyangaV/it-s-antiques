@@ -1,0 +1,79 @@
+/*
+======
+Header
+======
+*/
+.header {
+  padding: 2rem 0;
+  box-shadow: $primaryShadow;
+
+  & h3 {
+    font-family: $slantedFont;
+    text-align: center;
+    color: $primaryColor;
+    font-size: 3rem;
+  }
+
+  & h3 span {
+    color: $primaryDarkColor;
+  }
+  & ul {
+    display: flex;
+    justify-content: space-between;
+    width: $smallWidth;
+    margin: 0 auto;
+    max-width: $maxWidth;
+  }
+  & ul div {
+    display: flex;
+    align-items: center;
+  }
+
+  & .hRight {
+    animation: fadeRight 2s ease-in-out 1;
+  }
+
+  & .hLeft {
+    animation: fadeLeft 2s ease-in-out 1;
+  }
+
+  & a {
+    text-transform: capitalize;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: $mainTransition;
+  }
+  & a:hover,
+  & .selected {
+    color: $primaryColor;
+  }
+  @media screen and (min-width: 768px) {
+    & a {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(-100%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    transform: translateX(200%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+  }
+}

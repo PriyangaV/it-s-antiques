@@ -1,0 +1,96 @@
+.product-section {
+  padding: 4rem 0;
+  @media screen and (min-width: 992px) {
+    padding: 0 4rem;
+  }
+}
+.products-center {
+  width: 75vw;
+  margin: 0 auto;
+  max-width: $fullWidth;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 1.8rem;
+  row-gap: 1.8rem;
+
+  .product {
+    background: $mainWhite;
+    margin-bottom: 2rem;
+    box-shadow: $lightShadow;
+    transition: $mainTransition;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 19.69rem;
+    &:hover {
+      box-shadow: $darkShadow;
+    }
+    & img {
+      transition: $mainTransition;
+      height: 15rem;
+    }
+    &:hover img {
+      opacity: 0.2;
+    }
+    &:hover .product-link {
+      opacity: 1;
+    }
+    .img-container {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 0.6s ease-in-out;
+      }
+      &:hover::before {
+        left: 50%;
+        right: 50%;
+        width: 0;
+        background: rgba(182, 138, 94, 0.3);
+      }
+      &:hover::after {
+        height: 0;
+        top: 50%;
+        bottom: 50%;
+        background: rgba(182, 138, 94, 0.3);
+      }
+    }
+    & .product-footer {
+      padding: 1rem;
+      text-align: center;
+      letter-spacing: $mainSpacing;
+      display: grid;
+      grid-row-gap: 0.5rem;
+      grid-template-rows: 1fr auto;
+
+      & .product-title {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      & .product-price {
+        color: $primaryColor;
+        font-weight: bolder;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.product-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: $mainTransition;
+}

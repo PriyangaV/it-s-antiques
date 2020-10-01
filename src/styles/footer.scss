@@ -1,0 +1,15 @@
+footer {
+  width: 100%;
+  margin: 2rem 0.5rem;
+  & p {
+    & span {
+      font-family: $slantedFont;
+      text-transform: uppercase;
+      color: $primaryColor;
+      font-size: 0.8rem;
+    }
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
+  }
+}

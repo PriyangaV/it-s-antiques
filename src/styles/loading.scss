@@ -1,0 +1,74 @@
+.loading {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 3rem;
+  letter-spacing: 0.3rem;
+  width: 10rem;
+  margin: 5rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .box {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+
+    & .b {
+      border-radius: 50%;
+      border-left: 0.1rem solid;
+      border-right: 0.1rem solid;
+      border-top: 0.1rem solid transparent !important;
+      border-bottom: 0.1rem solid transparent !important;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: 1s;
+      transform: translate(-50%, -50%);
+      animation: rotate 2s infinite;
+    }
+
+    & .b1 {
+      width: 120px;
+      height: 120px;
+      border-color: #0b607a;
+    }
+
+    & .b2 {
+      width: 100px;
+      height: 100px;
+      border-color: #d8ab51;
+      animation-delay: 0.25s;
+    }
+
+    & .b3 {
+      width: 80px;
+      height: 80px;
+      border-color: #779742;
+      animation-delay: 0.5s;
+    }
+
+    & .b4 {
+      width: 60px;
+      height: 60px;
+      border-color: #d150c0;
+      animation-delay: 0.75s;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.2);
+    border-radius: 50%;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-180deg) scale(0.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(90deg) scale(1);
+    border-radius: 50%;
+  }
+}

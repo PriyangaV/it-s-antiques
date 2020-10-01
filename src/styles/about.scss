@@ -1,0 +1,11 @@
+.about-section {
+  width: $smallWidth;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  & p {
+    line-height: 2rem;
+    font-weight: 400;
+    letter-spacing: $mainSpacing;
+    font-size: 1.5rem;
+  }
+}

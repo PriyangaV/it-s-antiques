@@ -1,0 +1,46 @@
+.alert-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translate(-10%, 15%);
+  display: none;
+  z-index: 10;
+  background: #05b305;
+  width: 24rem;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  color: $mainWhite;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: $mainSpacing;
+  border-radius: $mainBorderRadius;
+  transition: all 0.3s linear;
+}
+.alert-show {
+  display: block;
+}
+.alert-center {
+  position: relative;
+}
+.alert {
+  & p {
+    margin-bottom: 0;
+    line-height: 2;
+  }
+  & .alert-close {
+    color: $mainWhite;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    cursor: pointer;
+    line-height: 0;
+  }
+}
+.alert-danger {
+  background: $mainRed;
+}

@@ -1,0 +1,86 @@
+.form {
+  width: $smallWidth;
+  margin: 0 auto;
+  max-width: $maxWidth;
+  .section-title {
+    margin-top: 0;
+  }
+
+  & .login-form,
+  & .checkout-form {
+    background: $mainWhite;
+    padding: 2rem;
+    text-transform: capitalize;
+    border-radius: $mainBorderRadius;
+    box-shadow: $lightShadow;
+    font-size: 1.5rem;
+  }
+
+  & .form-control {
+    & label {
+      display: block;
+    }
+    & input {
+      width: 100%;
+      border: none;
+      border: 2px solid $darkGrey;
+      margin-bottom: 1.25rem;
+      padding: 0.25rem;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      outline: none;
+    }
+  }
+}
+.form-empty,
+.stripe-errors {
+  text-align: center;
+  color: $mainRed;
+}
+.register-link {
+  margin-bottom: 0;
+  margin-top: 1rem;
+  text-align: center;
+}
+.register-link button {
+  background: transparent;
+  border: none;
+  color: $primaryColor;
+  text-transform: capitalize;
+  font-size: inherit;
+  display: inline-block;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+.disabled {
+  color: $mainWhite;
+  background: $darkGrey;
+  border-color: $darkGrey;
+}
+.disabled:hover {
+  background: transparent;
+  color: $darkGrey;
+  border-color: $darkGrey;
+}
+
+.login-btn {
+  text-transform: capitalize;
+  background: transparent;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-family: $primaryFont;
+  margin: 0 0.25rem;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  transition: $mainTransition;
+  font-weight: 300;
+  &:hover {
+    color: $primaryColor;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+  }
+}

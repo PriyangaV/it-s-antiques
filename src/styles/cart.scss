@@ -1,0 +1,79 @@
+.empty-cart {
+  text-align: center;
+  text-transform: capitalize;
+}
+.cart-items {
+  width: $smallWidth;
+  margin: 2rem auto 0 auto;
+  max-width: $maxWidth;
+
+  & h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  & .cart-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
+
+    & img {
+      width: 5rem;
+      height: 5rem;
+    }
+    & h4 {
+      font-size: 1rem;
+      text-transform: capitalize;
+      letter-spacing: $mainSpacing;
+      margin-bottom: 0;
+    }
+    & h5 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      letter-spacing: $mainSpacing;
+    }
+    & .item-amount {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    & .cart-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    & .remove-btn {
+      color: $primaryColor;
+      letter-spacing: $mainSpacing;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    & .amount-btn {
+      color: $primaryColor;
+      font-size: 1rem;
+    }
+  }
+}
+
+// Header Cart
+
+.cart-link-container {
+  position: relative;
+
+  & a {
+    margin-right: 10px;
+    font-weight: bolder;
+  }
+  & .cart-link-total {
+    display: block;
+    position: absolute;
+    background: $primaryColor;
+    top: -10px;
+    right: -10px;
+    padding: 0rem 0.4rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: $mainWhite;
+  }
+}

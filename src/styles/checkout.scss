@@ -1,0 +1,29 @@
+.checkout-form {
+  & h3 span {
+    color: $primaryColor;
+  }
+  .stripe-info {
+    font-size: 80%;
+    margin-top: 0.5rem;
+    color: $darkGrey;
+
+    & .stripe-info span {
+      color: $primaryColor;
+    }
+  }
+
+  & .card-element {
+    border: 2px solid $darkGrey;
+    padding: 0.5rem;
+    font-size: 4rem;
+    border-radius: $mainBorderRadius;
+  }
+
+  & .form-empty {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  & button {
+    margin-top: 1rem;
+  }
+}
